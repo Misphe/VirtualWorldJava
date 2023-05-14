@@ -4,37 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa501e7a-cd93-456e-978e-60ef6d2e6713" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VirtualWorldJava.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MVVM/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MVVM/IController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MVVM/IView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MVVM/IWorld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MVVM/View.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MVVM/World.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Organisms/Animals/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Organisms/Animals/Antelope.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Organisms/Animals/Fox.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Organisms/Animals/Human.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Organisms/Animals/Sheep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Organisms/Animals/Turtle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Organisms/Animals/Wolf.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Organisms/Organism.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Plants/Dandelion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Plants/Grass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Plants/Guarana.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Plants/PineBorscht.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Plants/Plant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Plants/WolfBerries.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tools/Defines.java" afterDir="false" />
+    <list default="true" id="fa501e7a-cd93-456e-978e-60ef6d2e6713" name="Changes" comment="Created everything i guess">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,13 +32,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Adrian\Desktop\Studia\Programowanie Obiektowe\VirtualWorldJava\src\Animals" />
@@ -82,7 +53,30 @@
       <option name="presentableId" value="Default" />
       <updated>1683921799415</updated>
     </task>
+    <task id="LOCAL-00001" summary="Created everything i guess">
+      <created>1684107925999</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1684107925999</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Created everything i guess" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created everything i guess" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
