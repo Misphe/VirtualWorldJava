@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fa501e7a-cd93-456e-978e-60ef6d2e6713" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VirtualWorldJava.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MVVM/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MVVM/IController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MVVM/IView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MVVM/IWorld.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MVVM/View.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MVVM/World.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Organisms/Animals/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Organisms/Animals/Antelope.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Organisms/Animals/Fox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Organisms/Animals/Human.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Organisms/Animals/Sheep.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Organisms/Animals/Turtle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Organisms/Animals/Wolf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Organisms/Organism.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Plants/Dandelion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Plants/Grass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Plants/Guarana.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Plants/PineBorscht.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Plants/Plant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Plants/WolfBerries.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tools/Defines.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2PhunACygzlPKGVqF93gfngbuHl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Adrian\Desktop\Studia\Programowanie Obiektowe\VirtualWorldJava\src\Animals" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fa501e7a-cd93-456e-978e-60ef6d2e6713" name="Changes" comment="" />
+      <created>1683921799415</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683921799415</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/MVVM/Controller.java</url>
+          <line>134</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/MVVM/Controller.java</url>
+          <line>155</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Organisms.Human" memberName="move" />
+      </pinned-members>
+    </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="organisms.get(131)" />
+        <watch expression="organisms.get(391)" />
+        <watch expression="organisms" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
