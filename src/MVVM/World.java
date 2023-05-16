@@ -30,41 +30,39 @@ public class World implements IWorld {
         organisms_slots = new Organism[columns][rows];
         organisms = new ArrayList<>();
         AddNewOrganism(new Human(this));
-        if(organisms.get(0) instanceof Human) {
-            player = (Human) organisms.get(0);
+        SetPlayer();
+
+        for (int i = 0; i < Defines.WOLF_COUNT; i++) {
+            AddNewOrganism(new Wolf(this));
+        }
+        for (int i = 0; i < Defines.SHEEP_COUNT; i++) {
+            AddNewOrganism(new Sheep(this));
+        }
+        for (int i = 0; i < Defines.FOX_COUNT; i++) {
+            AddNewOrganism(new Fox(this));
+        }
+        for (int i = 0; i < Defines.TURTLE_COUNT; i++) {
+            AddNewOrganism(new Turtle(this));
+        }
+        for (int i = 0; i < Defines.ANTELOPE_COUNT; i++) {
+            AddNewOrganism(new Antelope(this));
+        }
+        for (int i = 0; i < Defines.GRASS_COUNT; i++) {
+            AddNewOrganism(new Grass(this));
+        }
+        for (int i = 0; i < Defines.DANDELION_COUNT; i++) {
+            AddNewOrganism(new Dandelion(this));
+        }
+        for (int i = 0; i < Defines.GUARANA_COUNT; i++) {
+            AddNewOrganism(new Guarana(this));
+        }
+        for (int i = 0; i < Defines.WOLFBERRIES_COUNT; i++) {
+            AddNewOrganism(new WolfBerries(this));
+        }
+        for (int i = 0; i < Defines.PINEBORSCHT_COUNT; i++) {
+            AddNewOrganism(new PineBorscht(this));
         }
 
-
-        AddNewOrganism(new Grass(this));
-        AddNewOrganism(new Grass(this));
-
-        AddNewOrganism(new Dandelion(this));
-        AddNewOrganism(new Dandelion(this));
-
-        AddNewOrganism(new Guarana(this));
-        AddNewOrganism(new Guarana(this));
-
-        AddNewOrganism(new PineBorscht(this));
-        AddNewOrganism(new PineBorscht(this));
-
-        AddNewOrganism(new WolfBerries(this));
-        AddNewOrganism(new WolfBerries(this));
-
-        AddNewOrganism(new Sheep(this));
-        AddNewOrganism(new Sheep(this));
-
-
-        AddNewOrganism(new Antelope(this));
-        AddNewOrganism(new Antelope(this));
-
-        AddNewOrganism(new Fox(this));
-        AddNewOrganism(new Fox(this));
-
-        AddNewOrganism(new Turtle(this));
-        AddNewOrganism(new Turtle(this));
-
-        AddNewOrganism(new Wolf(this));
-        AddNewOrganism(new Wolf(this));
 
     }
 
@@ -72,6 +70,70 @@ public class World implements IWorld {
         organisms.add(organism);
         organisms_slots[organism.GetX()][organism.GetY()] = organism;
         PushNewLog(CreateBreedLog(organism));
+    }
+
+    @Override
+    public void AddNewOrganism(String name, int x, int y) {
+        if(organisms_slots[x][y] != null){
+            return;
+        }
+
+        Organism new_organism = null;
+
+        switch (name){
+            case "Wolf":
+                new_organism = new Wolf(this, x, y);
+                break;
+            case "Sheep":
+                new_organism = new Sheep(this, x, y);
+                break;
+            case "Fox":
+                new_organism = new Fox(this, x, y);
+                break;
+            case "Turtle":
+                new_organism = new Turtle(this, x, y);
+                break;
+            case "Antelope":
+                new_organism = new Antelope(this, x, y);
+                break;
+            case "Grass":
+                new_organism = new Grass(this, x, y);
+                break;
+            case "Dandelion":
+                new_organism = new Dandelion(this, x, y);
+                break;
+            case "Guarana":
+                new_organism = new Guarana(this, x, y);
+                break;
+            case "Wolf Berries":
+                new_organism = new WolfBerries(this, x, y);
+                break;
+            case "Pine Borscht":
+                new_organism = new PineBorscht(this, x, y);
+                break;
+        }
+        organisms.add(new_organism);
+        organisms_slots[new_organism.GetX()][new_organism.GetY()] = new_organism;
+        PushNewLog(CreateBreedLog(new_organism));
+
+        SortOrganisms();
+    }
+
+    @Override
+    public ArrayList<Organism> GetOrganismsList() {
+        ArrayList<Organism> allOrganisms = new ArrayList<>();
+        allOrganisms.add(new Human(null,		Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
+        allOrganisms.add(new Wolf(null,		Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
+        allOrganisms.add(new Sheep(null,		Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
+        allOrganisms.add(new Fox(null,			Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
+        allOrganisms.add(new Turtle(null,		Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
+        allOrganisms.add(new Antelope(null,	Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
+        allOrganisms.add(new Grass(null,		Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
+        allOrganisms.add(new Dandelion(null,	Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
+        allOrganisms.add(new Guarana(null,		Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
+        allOrganisms.add(new WolfBerries(null, Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
+        allOrganisms.add(new PineBorscht(null, Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
+        return allOrganisms;
     }
 
     @Override

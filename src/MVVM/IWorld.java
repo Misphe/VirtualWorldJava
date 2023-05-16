@@ -3,6 +3,8 @@ package MVVM;
 import javafx.util.Pair;
 import Organisms.Organism;
 
+import java.util.ArrayList;
+
 public interface IWorld {
     void ExecuteTurn();
     Pair<Integer, Integer> GetSize();
@@ -15,4 +17,8 @@ public interface IWorld {
     void SaveState();
     void LoadState();
     void ActivatePlayerPower();
+
+    void AddNewOrganism(String name, int x, int y);
+
+    ArrayList<Organism> GetOrganismsList();
 }

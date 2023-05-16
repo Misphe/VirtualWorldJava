@@ -6,6 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="fa501e7a-cd93-456e-978e-60ef6d2e6713" name="Changes" comment="Created everything i guess">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MVVM/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MVVM/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MVVM/IView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MVVM/IView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MVVM/IWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MVVM/IWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MVVM/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MVVM/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MVVM/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MVVM/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Organisms/Animals/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Organisms/Animals/Human.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +67,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684107925999</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Created everything i guess">
+      <created>1684108072754</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684108072754</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -79,20 +93,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Created everything i guess" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/MVVM/Controller.java</url>
-          <line>134</line>
-          <option name="timeStamp" value="68" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/MVVM/Controller.java</url>
-          <line>155</line>
-          <option name="timeStamp" value="69" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Organisms.Human" memberName="move" />

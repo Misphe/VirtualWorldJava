@@ -1,15 +1,43 @@
 import MVVM.*;
+import Tools.Defines;
+
+import javax.swing.*;
 
 public class Main {
 
     public static void main(String[] args) {
-        // Get the number of rows from user input
-        // int rows = Integer.parseInt(JOptionPane.showInputDialog("Enter the number of rows:"));
-        // Get the number of columns from user input
-        // int columns = Integer.parseInt(JOptionPane.showInputDialog("Enter the number of columns:"));
+        boolean correctSize = false;
+        int columns = 0;
+        int rows = 0;
+        String columnsInput = null;
+        String rowsInput = null;
 
-        View view = new View(50, 50);
-        World world = new World(50,50);
+        while(!correctSize) {
+            columnsInput = JOptionPane.showInputDialog("Enter the number of columns:");
+            if (columnsInput == null){
+                return;
+            }
+
+            rowsInput = JOptionPane.showInputDialog("Enter the number of rows:");
+            if (rowsInput == null){
+                return;
+            }
+
+            try {
+                rows = Integer.parseInt(rowsInput);
+                columns = Integer.parseInt(columnsInput);
+            } catch (RuntimeException e) {
+                continue;
+            }
+
+            if(rows > 200 || columns > 200 || rows * columns <= Defines.ORGANISMS_COUNT){
+                continue;
+            }
+            correctSize = true;
+        }
+
+        View view = new View(columns, rows);
+        World world = new World(columns, rows);
         Controller controller = new Controller(world, view);
     }
 }

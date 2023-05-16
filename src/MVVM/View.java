@@ -25,9 +25,9 @@ public class View implements IView {
     JButton loadButton;
     JButton superPowerButton;
 
-    private final int windowsSizeX = 1000;
+    private final int windowsSizeX = 1500;
     private final int windowsSizeY = 1000;
-    public final int buttonSize;
+    public int buttonSize;
     public int columns;
     public int rows;
 
@@ -50,7 +50,7 @@ public class View implements IView {
         this.columns = columns;
         this.rows = rows;
 
-        buttonSize = (int) Math.floor(windowsSizeX / (columns * 1.5));
+        AdjustButtonSize();
 
         frame.setFocusable(true);
         frame.requestFocusInWindow();
@@ -60,16 +60,25 @@ public class View implements IView {
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         buttonsPanel.setLayout(null);
-        //buttonsPanel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 
         frame.setSize(windowsSizeX, windowsSizeY);
         frame.setLayout(null);
-        buttonsPanel.setBounds(Defines.BOARD_POS_X, Defines.BOARD_POS_Y, buttonSize * (columns + 3), buttonSize * (columns + 5));
-        logsPanel.setBounds(buttonSize * (columns + 3), 50, Defines.LOG_WIDTH, Defines.LOG_HEIGHT);
+
+        buttonsPanel.setBounds(Defines.BOARD_POS_X, Defines.BOARD_POS_Y, buttonSize * columns, buttonSize * rows + 50 + Defines.NEXTTURNHEIGHT);
+        logsPanel.setBounds(buttonSize * columns + 100, 50, Defines.LOG_WIDTH, Defines.LOG_HEIGHT);
         frame.add(buttonsPanel);
         frame.add(logsPanel);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+    }
+
+    private void AdjustButtonSize() {
+        if(rows >= columns) {
+            buttonSize = (int) Math.floor(windowsSizeY / (rows * 1.35));
+        }
+        else{
+            buttonSize = (int) Math.floor(windowsSizeX / (columns * 1.6));
+        }
     }
 
     private void AddButtons() {
@@ -83,17 +92,34 @@ public class View implements IView {
             }
         }
 
-        int nextTurnX = 0;
-        int nextTurnY = rows * buttonSize + 2 * buttonSize;
+        int buttonX = 0;
+        int buttonsY = rows * buttonSize + 25;
+        int size = buttonSize * columns / 5;
+        int gap = size / 3;
 
-        nextTurn.setBounds(nextTurnX, nextTurnY, Defines.NEXTTURNWIDTH, Defines.NEXTTURNHEIGHT);
+        nextTurn = new JButton();
+        nextTurn.setText("next turn");
+        nextTurn.setBounds(buttonX, buttonsY, size, Defines.NEXTTURNHEIGHT);
         nextTurn.setFocusable(false);
-        saveButton.setBounds(nextTurnX + 100, nextTurnY, Defines.NEXTTURNWIDTH, Defines.NEXTTURNHEIGHT);
+        buttonX += (size + gap);
+
+        saveButton = new JButton();
+        saveButton.setText("save");
+        saveButton.setBounds(buttonX, buttonsY, size, Defines.NEXTTURNHEIGHT);
         saveButton.setFocusable(false);
-        loadButton.setBounds(nextTurnX + 200, nextTurnY, Defines.NEXTTURNWIDTH, Defines.NEXTTURNHEIGHT);
+        buttonX += (size + gap);
+
+        loadButton = new JButton();
+        loadButton.setText("load");
+        loadButton.setBounds(buttonX, buttonsY, size, Defines.NEXTTURNHEIGHT);
         loadButton.setFocusable(false);
-        superPowerButton.setBounds(nextTurnX + 300, nextTurnY, (int) (Defines.NEXTTURNWIDTH * 1.5), Defines.NEXTTURNHEIGHT);
+        buttonX += (size + gap);
+
+        superPowerButton = new JButton();
+        superPowerButton.setText("activate power");
+        superPowerButton.setBounds(buttonX, buttonsY, size, Defines.NEXTTURNHEIGHT);
         superPowerButton.setFocusable(false);
+
         buttonsPanel.add(nextTurn);
         buttonsPanel.add(saveButton);
         buttonsPanel.add(loadButton);
@@ -112,12 +138,12 @@ public class View implements IView {
     @Override
     public void AddLegend(String[] legendText, Color[] legendColors) {
         legendPanel.setLayout(new BoxLayout(legendPanel, BoxLayout.Y_AXIS));
-        legendPanel.setBounds( buttonSize * (columns + 3), Defines.LEGEND_Y, Defines.LEGEND_WIDTH, Defines.LEGEND_HEIGHT);
+        legendPanel.setBounds( buttonSize * columns + 100, Defines.LEGEND_Y, Defines.LEGEND_WIDTH, Defines.LEGEND_HEIGHT);
 
         for(int i = 0; i < legendText.length; i++) {
             JButton colorButton = new JButton();
             colorButton.setBackground(legendColors[i]);
-            colorButton.setPreferredSize(new Dimension(20, 20));
+            colorButton.setPreferredSize(new Dimension(buttonSize, buttonSize));
             colorButton.setEnabled(false);
 
             JLabel nameLabel = new JLabel(" - " + legendText[i]);
@@ -177,23 +203,42 @@ return superPowerButton;
     public void ChangeSize(int x, int y) {
         this.columns = x;
         this.rows = y;
+        AdjustButtonSize();
         buttons = new JButton[x][y];
 
         frame.remove(buttonsPanel);
         frame.remove(logsPanel);
+        frame.remove(legendPanel);
 
         frame.revalidate();
         frame.repaint();
 
+        legendPanel = new JPanel();
         buttonsPanel = new JPanel();
         logsPanel = new JPanel();
         buttonsPanel.setLayout(null);
-        buttonsPanel.setBounds(0, 0, buttonSize * (columns + 3), buttonSize * (columns + 5));
-        logsPanel.setBounds(buttonSize * (columns + 3), 50, 500, 500);
+        buttonsPanel.setBounds(Defines.BOARD_POS_X, Defines.BOARD_POS_Y, buttonSize * columns, buttonSize * rows + 50 + Defines.NEXTTURNHEIGHT);
+        logsPanel.setBounds(buttonSize * columns + 100, 50, Defines.LOG_WIDTH, Defines.LOG_HEIGHT);
         AddLogs();
         AddButtons();
 
         frame.add(buttonsPanel);
         frame.add(logsPanel);
+    }
+
+    @Override
+    public JPopupMenu CreatePopUpList(String title, String[] options, JButton button) {
+        JPopupMenu popupMenu = new JPopupMenu();
+        JMenu menuTitle = new JMenu(title);
+        popupMenu.add(menuTitle);
+
+        for (String option : options) {
+            JMenuItem menuItem = new JMenuItem(option);
+            popupMenu.add(menuItem);
+        }
+
+        popupMenu.show(button, 0, button.getHeight());
+
+        return popupMenu;
     }
 }

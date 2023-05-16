@@ -4,6 +4,7 @@ import javax.swing.*;
 import MVVM.IController;
 
 import java.awt.*;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
@@ -21,7 +22,10 @@ public class Controller implements IController {
     public Controller(IWorld world, IView view) {
         this.world = world;
         this.view = view;
+        SetKeyListener();
         SetListeners();
+        CreateLegend();
+        UpdateView();
     }
 
     private void SetListeners() {
@@ -30,9 +34,6 @@ public class Controller implements IController {
         SetLoadButtonListener();
         SetSuperPowerButtonListener();
         SetBoardClickListener();
-        SetKeyListener();
-        CreateLegend();
-        UpdateView();
     }
 
     private void SetNextTurnListener() {
@@ -56,6 +57,8 @@ public class Controller implements IController {
             world.LoadState();
             Pair<Integer, Integer> size = world.GetSize();
             view.ChangeSize(size.getKey(), size.getValue());
+            SetListeners();
+            CreateLegend();
             UpdateView();
         });
     }
@@ -79,8 +82,28 @@ public class Controller implements IController {
                 int currentCol = column;
 
                 button.addActionListener(e -> {
-                    button.setBackground(Color.BLACK);
-                    System.out.println(currentCol + ", " + currentRow);
+
+                    ArrayList<Organism> allOrganisms = world.GetOrganismsList();
+                    String[] popUpOptions = new String[allOrganisms.size() - 1];
+                    for(int i = 1; i < allOrganisms.size(); i++) {
+                        popUpOptions[i - 1] = allOrganisms.get(i).GetName();
+                    }
+                    String title = "Create organism";
+
+                    JPopupMenu popupMenu = view.CreatePopUpList(title, popUpOptions, button);
+
+                    for (Component component : popupMenu.getComponents()) {
+                        if (component instanceof JMenuItem) {
+                            JMenuItem menuItem = (JMenuItem) component;
+                            menuItem.addActionListener(e2 -> {
+                                JMenuItem selectedMenuItem = (JMenuItem) e2.getSource();
+                                String selectedOption = selectedMenuItem.getText();
+
+                                world.AddNewOrganism(selectedOption, currentCol, currentRow);
+                                UpdateView();
+                            });
+                        }
+                    }
                 });
             }
         }
@@ -132,18 +155,7 @@ public class Controller implements IController {
     }
 
     private void CreateLegend() {
-        ArrayList<Organism> allOrganisms = new ArrayList<>();
-        allOrganisms.add(new Human(null,		Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
-        allOrganisms.add(new Wolf(null,		Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
-        allOrganisms.add(new Sheep(null,		Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
-        allOrganisms.add(new Fox(null,			Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
-        allOrganisms.add(new Turtle(null,		Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
-        allOrganisms.add(new Antelope(null,	Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
-        allOrganisms.add(new Grass(null,		Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
-        allOrganisms.add(new Dandelion(null,	Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
-        allOrganisms.add(new Guarana(null,		Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
-        allOrganisms.add(new WolfBerries(null, Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
-        allOrganisms.add(new PineBorscht(null, Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
+        ArrayList<Organism> allOrganisms = world.GetOrganismsList();
 
         String[] legendText = new String[allOrganisms.size()];
         Color[] legendColors = new Color[allOrganisms.size()];

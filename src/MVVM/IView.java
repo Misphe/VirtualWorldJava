@@ -16,4 +16,6 @@ public interface IView {
     void AddLegend(String[] legendText, Color[] legendColors);
 
     void ChangeSize(int x, int y);
+
+    JPopupMenu CreatePopUpList(String title, String[] options, JButton button);
 }

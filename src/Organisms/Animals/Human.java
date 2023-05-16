@@ -106,7 +106,7 @@ public class Human extends Animal {
     }
 
     public Color GetColor() {
-        return Color.BLACK;
+        return Color.BLUE;
     }
 
     public void SetCooldown() {
