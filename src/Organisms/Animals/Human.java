@@ -1,6 +1,6 @@
 package Organisms.Animals;
 
-import MVVM.World;
+import MVP.World;
 import Organisms.Organism;
 import Tools.*;
 
@@ -107,10 +107,6 @@ public class Human extends Animal {
 
     public Color GetColor() {
         return Color.BLUE;
-    }
-
-    public void SetCooldown() {
-        cooldown = Defines.MAX_COOLDOWN;
     }
 
     public void SetCooldown(int setCooldown) {

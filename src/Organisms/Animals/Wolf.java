@@ -2,7 +2,7 @@ package Organisms.Animals;
 
 import java.awt.*;
 
-import MVVM.*;
+import MVP.*;
 import Tools.*;
 
 public class Wolf extends Animal {

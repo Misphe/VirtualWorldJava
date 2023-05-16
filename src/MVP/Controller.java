@@ -1,21 +1,16 @@
-package MVVM;
+package MVP;
 
 import javax.swing.*;
-import MVVM.IController;
 
 import java.awt.*;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
 import Organisms.*;
-import Organisms.Animals.*;
-import Plants.*;
-import Tools.Defines;
 import javafx.util.Pair;
 
-public class Controller implements IController {
+public class Controller {
     IWorld world;
     IView view;
 
@@ -39,7 +34,6 @@ public class Controller implements IController {
     private void SetNextTurnListener() {
         JButton button = view.GetNextTurnBtn();
         button.addActionListener(e -> {
-            System.out.println("klinales nastepna ture");
             world.ExecuteTurn();
             UpdateView();
         });

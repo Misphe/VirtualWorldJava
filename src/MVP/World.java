@@ -1,4 +1,4 @@
-package MVVM;
+package MVP;
 
 import java.awt.*;
 import java.io.File;
@@ -18,7 +18,6 @@ public class World implements IWorld {
     private int columns;
     private List<Organism> organisms;
     private Organism[][] organisms_slots;
-    // private Human player;
     private String[] logs;
 
     private Human player;
@@ -123,16 +122,16 @@ public class World implements IWorld {
     public ArrayList<Organism> GetOrganismsList() {
         ArrayList<Organism> allOrganisms = new ArrayList<>();
         allOrganisms.add(new Human(null,		Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
-        allOrganisms.add(new Wolf(null,		Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
+        allOrganisms.add(new Wolf(null,		    Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
         allOrganisms.add(new Sheep(null,		Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
         allOrganisms.add(new Fox(null,			Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
         allOrganisms.add(new Turtle(null,		Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
-        allOrganisms.add(new Antelope(null,	Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
+        allOrganisms.add(new Antelope(null,	    Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
         allOrganisms.add(new Grass(null,		Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
         allOrganisms.add(new Dandelion(null,	Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
         allOrganisms.add(new Guarana(null,		Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
-        allOrganisms.add(new WolfBerries(null, Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
-        allOrganisms.add(new PineBorscht(null, Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
+        allOrganisms.add(new WolfBerries(null,  Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
+        allOrganisms.add(new PineBorscht(null,  Defines.NOT_IN_PLAY, Defines.NOT_IN_PLAY));
         return allOrganisms;
     }
 
@@ -336,6 +335,9 @@ public class World implements IWorld {
     }
 
     public void ActivatePlayerPower() {
+        if(player == null){
+            return;
+        }
         if(player.GetCooldown() == 0) {
             player.SetCooldown(Defines.MAX_COOLDOWN);
             player.FlickPowerState();

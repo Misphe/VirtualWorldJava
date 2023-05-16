@@ -1,6 +1,6 @@
 package Organisms.Animals;
 
-import MVVM.World;
+import MVP.World;
 
 import java.awt.*;
 

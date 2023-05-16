@@ -1,4 +1,4 @@
-import MVVM.*;
+import MVP.*;
 import Tools.Defines;
 
 import javax.swing.*;

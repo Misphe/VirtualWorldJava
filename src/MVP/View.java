@@ -1,14 +1,9 @@
-package MVVM;
+package MVP;
 
-import Organisms.*;
-import Organisms.Animals.*;
-import Plants.*;
 import Tools.Defines;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
-import java.util.ArrayList;
 
 public class View implements IView {
     JFrame frame;
@@ -143,7 +138,7 @@ public class View implements IView {
         for(int i = 0; i < legendText.length; i++) {
             JButton colorButton = new JButton();
             colorButton.setBackground(legendColors[i]);
-            colorButton.setPreferredSize(new Dimension(buttonSize, buttonSize));
+            colorButton.setPreferredSize(new Dimension(20, 20));
             colorButton.setEnabled(false);
 
             JLabel nameLabel = new JLabel(" - " + legendText[i]);

@@ -4,15 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa501e7a-cd93-456e-978e-60ef6d2e6713" name="Changes" comment="Created everything i guess">
+    <list default="true" id="fa501e7a-cd93-456e-978e-60ef6d2e6713" name="Changes" comment="Improved things and added option to add organism after clicking on an empty button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MVVM/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MVVM/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MVVM/IView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MVVM/IView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MVVM/IWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MVVM/IWorld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MVVM/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MVVM/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MVVM/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MVVM/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MVVM/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MVP/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MVVM/IController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MVVM/IView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MVP/IView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MVVM/IWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MVP/IWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MVVM/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MVP/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MVVM/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MVP/World.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Organisms/Animals/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Organisms/Animals/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Organisms/Animals/Antelope.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Organisms/Animals/Antelope.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Organisms/Animals/Fox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Organisms/Animals/Fox.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Organisms/Animals/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Organisms/Animals/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Organisms/Animals/Sheep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Organisms/Animals/Sheep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Organisms/Animals/Turtle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Organisms/Animals/Turtle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Organisms/Animals/Wolf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Organisms/Animals/Wolf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Organisms/Organism.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Organisms/Organism.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Plants/Dandelion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Plants/Dandelion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Plants/Grass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Plants/Grass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Plants/Guarana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Plants/Guarana.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Plants/PineBorscht.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Plants/PineBorscht.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Plants/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Plants/Plant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Plants/WolfBerries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Plants/WolfBerries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tools/Defines.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tools/Defines.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684108072754</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Improved things and added option to add organism after clicking on an empty button">
+      <created>1684267489446</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684267489446</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -90,7 +112,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created everything i guess" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created everything i guess" />
+    <MESSAGE value="Improved things and added option to add organism after clicking on an empty button" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved things and added option to add organism after clicking on an empty button" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

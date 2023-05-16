@@ -1,4 +1,4 @@
-package MVVM;
+package MVP;
 
 import javafx.util.Pair;
 import Organisms.Organism;

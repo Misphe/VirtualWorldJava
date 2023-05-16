@@ -1,4 +1,4 @@
-package MVVM;
+package MVP;
 import javax.swing.*;
 import java.awt.*;
 

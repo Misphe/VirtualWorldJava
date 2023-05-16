@@ -1,6 +1,6 @@
 package Organisms.Animals;
 
-import MVVM.World;
+import MVP.World;
 import Organisms.Organism;
 import Tools.Defines;
 

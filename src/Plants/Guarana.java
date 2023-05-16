@@ -1,6 +1,6 @@
 package Plants;
 
-import MVVM.World;
+import MVP.World;
 import Tools.Defines;
 
 import java.awt.Color;

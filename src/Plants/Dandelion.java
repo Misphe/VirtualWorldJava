@@ -1,10 +1,9 @@
 package Plants;
 
-import MVVM.World;
+import MVP.World;
 import Tools.Defines;
 
 import java.awt.*;
-import java.util.Objects;
 
 public class Dandelion extends Plant {
     public Dandelion(World ref_world) {

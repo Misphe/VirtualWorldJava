@@ -46,18 +46,7 @@ public class Defines {
 
     public static final int NO_EMPTY_ADJACENT = -1;
 
-    public static final boolean SLOW_MODE = false;
-    public static final boolean DEBUG_MODE = false;
 
-    public static final String RESET_COLOR = "\033[0m";
-    public static final String SET_LETTER_RED = "\033[31m";
-    public static final String SET_LETTER_GREEN = "\033[32m";
-    public static final String SET_LETTER_YELLOW = "\033[33m";
-    public static final String SET_LETTER_BLUE = "\033[34m";
-    public static final String SET_LETTER_MAGENTA = "\033[35m";
-    public static final String SET_LETTER_CYAN = "\033[36m";
-    public static final String SET_LETTER_WHITE = "\033[37m";
-    public static final String SET_LETTER_BLACK = "\033[30m";
 
     public static final int SET_BG_BLACK = 0;
     public static final int SET_BG_BLUE = 16;
@@ -157,7 +146,7 @@ public class Defines {
     public static final int LOG_WIDTH = 500;
     public static final int LOG_HEIGHT = 350;
     public static final int LEGEND_WIDTH = 500;
-    public static final int LEGEND_HEIGHT = 500;
+    public static final int LEGEND_HEIGHT = 300;
 }
 
 
